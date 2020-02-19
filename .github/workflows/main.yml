@@ -39,11 +39,9 @@ jobs:
         make
 
     - name: TEST Debug Build
-      working-directory: ./TesseractOCR
       run: |
         xcodebuild -workspace Tesseract-OCR-iOS.xcworkspace -scheme TesseractOCR -configuration Debug -sdk iphonesimulator
 
     - name: TEST Release Build
-      working-directory: ./TesseractOCR
       run: |
         xcodebuild -workspace Tesseract-OCR-iOS.xcworkspace -scheme TesseractOCR -configuration Release -sdk iphonesimulator
