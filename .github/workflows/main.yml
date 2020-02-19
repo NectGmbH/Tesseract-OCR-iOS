@@ -24,7 +24,7 @@ jobs:
     - name: Prepare Build Dependencies
       working-directory: ./TesseractOCR
       run: |
-        brew install make cmake curl libtool pkg-config autoconf automake m4 ruby-build
+        brew install make cmake curl libtool pkg-config autoconf automake m4 ruby-build gnutls gnu-getopt
 
     - name: Prepare Build Directory
       working-directory: ./TesseractOCR
