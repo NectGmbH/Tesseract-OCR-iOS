@@ -13,7 +13,7 @@ jobs:
 
     - name: Prepare Root Directory
       run: |
-        bundle install
+        bundle install --frozen
         bundle exec pod install
 
     - name: Prepare Build Directory
