@@ -1,6 +1,7 @@
-Tesseract OCR iOS 
+# Tesseract OCR iOS
 =================
-[![Build Status](https://travis-ci.org/gali8/Tesseract-OCR-iOS.svg?branch=master)](https://travis-ci.org/gali8/Tesseract-OCR-iOS) [![Coverage Status](https://img.shields.io/coveralls/gali8/Tesseract-OCR-iOS.svg)](https://coveralls.io/r/gali8/Tesseract-OCR-iOS) [![](https://img.shields.io/cocoapods/v/TesseractOCRiOS.svg)](http://cocoapods.org/?q=tesseractocrios) [![](https://img.shields.io/cocoapods/p/TesseractOCRiOS.svg)](http://cocoapods.org/?q=tesseractocrios)  [![](https://img.shields.io/cocoapods/l/TesseractOCRiOS.svg)](https://github.com/gali8/Tesseract-OCR-iOS/blob/master/LICENSE.md) 
+
+![Build](https://github.com/NectGmbH/Tesseract-iOS/workflows/Build/badge.svg)
 
 **Use Tesseract OCR in iOS 7.0+ projects written in either Objective-C or Swift.
 Easy and fast.**
@@ -16,30 +17,37 @@ These are the current versions of the upstream bundled libraries within the fram
 
 **All libs are with bitcode integrated**
 
-Getting Started
+## Install
 =================
-See the [Installation](https://github.com/gali8/Tesseract-OCR-iOS/wiki/Installation) page in the wiki. Once you're setup see some [usage examples](https://github.com/gali8/Tesseract-OCR-iOS/wiki/Using-Tesseract-OCR-iOS).
 
-Known Limitations
+### Via Cocoapods
+
+Add the following line to your Podfile:
+```
+pod 'Tesseract-iOS', :git => 'https://github.com/NectGmbH/Tesseract-iOS.git', :tag => '4.1'
+```
+Run `pod install`
+
+### Via Carhage
+
+Add the following line to your Cartfile (not tested):
+```
+github "NectGmbH/Tesseract-iOS"
+```
+Run `carthage update`
+
+## Known Limitations
 =================
 
 - No OS X support.
 - Strict requirement on language files existing in a referenced "tessdata" folder.
 
-Release Notes
+## Release Notes
 =================
-
-### 3.1.1 and greater
 
 See the [Releases](https://github.com/gali8/Tesseract-OCR-iOS/releases) page
 
-### Older releases
-
-See the [Release Notes wiki page](https://github.com/gali8/Tesseract-OCR-iOS/wiki/Release-Notes)
-
-
-
-License
+## License
 =================
 
 Tesseract OCR iOS and TesseractOCR.framework are distributed under the MIT
@@ -53,6 +61,7 @@ http://www.apache.org/licenses/LICENSE-2.0).
 Contributors
 =================
 
+Nect GmbH
 Daniele Galiotto (founder) - iOS Freelance Developer -
 **[www.g8production.com](http://www.g8production.com)**
 

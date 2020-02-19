@@ -70,6 +70,8 @@ crashlytics-build.properties
 ### Tesseract and Leptonica ###
 leptonica-*
 tesseract-*
+!tesseract-ocr-patch.sh
+!*.podspec
 
 # GCOV code coverage files
 *.gcda

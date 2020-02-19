@@ -1,0 +1,36 @@
+name: Build
+
+on: [push, pull_request]
+
+jobs:
+  ios:
+    runs-on: macos-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]')"
+
+    steps:
+    - name: Checkout Project
+      uses: actions/checkout@v1
+
+    - name: Prepare Root Directory
+      run: |
+        pod install
+
+    - name: Prepare Build Directory
+      working-directory: ./TesseractOCR
+      run: |
+        ./tesseract-ocr-patch.sh
+
+    - name: Cross Compile Libraries
+      working-directory: ./TesseractOCR
+      run: |
+        make
+
+    - name: TEST Debug Build
+      working-directory: ./TesseractOCR
+      run: |
+        xcodebuild -workspace Tesseract-OCR-iOS.xcworkspace -scheme TesseractOCR -configuration Debug -sdk iphonesimulator
+
+    - name: TEST Release Build
+      working-directory: ./TesseractOCR
+      run: |
+        xcodebuild -workspace Tesseract-OCR-iOS.xcworkspace -scheme TesseractOCR -configuration Release -sdk iphonesimulator
