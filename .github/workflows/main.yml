@@ -24,7 +24,6 @@ jobs:
     - name: Prepare Build Dependencies
       working-directory: ./TesseractOCR
       run: |
-        xcode-select --install
         brew install make cmake curl libtool pkg-config autoconf automake m4 ruby-build
 
     - name: Prepare Build Directory
