@@ -3,4 +3,4 @@
 	url = https://github.com/tesseract-ocr/tesseract.git
 [submodule "TesseractOCR/libtiff-ios"]
 	path = TesseractOCR/libtiff-ios
-	url = https://github.com/chaoskyme/libtiff-ios.git
+	url = https://github.com/NectGmbH/libtiff-ios.git
